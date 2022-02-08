@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&family=Poppins:wght@400;500;600;700&family=Rubik:ital,wght@0,300;0,400;0,500;1,400&display=swap');
+
+:root {
+    --color-aqua-transparent: hsla(178, 100%, 50%, 0.5);
+    --colo-aqua: #00FFF8;
+    --second-text-color: #8BACD9;
+    --offer-font-size: 16px;
+    --offer-line-height: 20px;
+    --content-size: 302px
+}
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Outfit', sans-serif;
+    background-color: #0D192C;
+}
+
+main {
+    background-color: #15263F;
+    min-width: 327px;
+    max-width: 350px;
+    margin: 2% auto 0;
+    border-radius: 20px;
+    box-sizing: border-box;
+    height: 90%;
+}
+
+.content {
+    display: flex;
+    flex-flow: column wrap;
+    align-items: flex-start;
+    padding: 24px 24px 24px;
+}
+
+.cube {
+    border-radius: 8px;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.cube::after {
+    content: url(./assets/icon-view.svg);
+    background: var(--color-aqua-transparent);
+    position: absolute;
+    inset: 0;
+    display:         flex;
+    justify-content: center;
+    align-items:     center;
+    box-sizing: content-box;
+    opacity: 0;
+}
+
+.cube:hover::after {
+    opacity: 1;
+}
+
+.cube > img {
+    width: 100%;
+    display: block;
+}
+
+.content > div {
+    margin-bottom: 24px;
+    width: var(--content-size);
+}
+
+.content-title {
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 28px;
+    color: #FFFFFF;
+
+    margin-bottom: 16px;
+}
+
+.content-title:hover {
+    cursor: pointer;
+    color: var(--colo-aqua)
+}
+
+.content-description {
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 26px;
+    color: var(--second-text-color);
+}
+
+.eth-amount {
+    font-weight: 600;
+    font-size: var(--offer-font-size);
+    line-height: var(--offer-line-height);
+    color: var(--colo-aqua);
+}
+
+.time-left {
+    font-weight: normal;
+    font-size: var(--offer-font-size);
+    line-height: var(--offer-line-height);
+    color: var(--second-text-color);
+}
+
+.offer-details {
+    display: flex;
+    justify-content: space-between;
+}
+
+.content > div.who-created {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    color: var(--second-text-color);
+    border-top: 1px solid #2E405A;
+    padding-top: 16px;
+    margin-bottom: 8px;
+}
+
+.who-created > img {
+    --who-created-size: 30px;
+    width: var(--who-created-size);
+    height: var(--who-created-size);
+    border: 1px solid #FFFFFF;
+    border-radius: 50%;
+    margin-right: 16px;
+}
+
+.who-created a {
+    color: #FFFFFF;
+}
+
+
+.who-created a:hover {
+    cursor: pointer;
+    color: var(--colo-aqua)
+}
